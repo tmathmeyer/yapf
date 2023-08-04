@@ -343,7 +343,7 @@ def _SpaceRequiredBetween(left, right, is_line_disabled):
   if (subtypes.TYPED_NAME in left.subtypes or
       subtypes.TYPED_NAME in right.subtypes):
     # A typed argument should have a space after the colon.
-    return True
+    return style.Get('SPACES_AROUND_ANNOTATED_DEFAULT_PARAMETER')
   if left.is_string:
     if (rval == '=' and
         subtypes.DEFAULT_OR_NAMED_ASSIGN_ARG_LIST in right.subtypes):
